@@ -10,7 +10,7 @@ soup = BeautifulSoup(r.text, 'html.parser')
 table = soup.find('table', {'class': 'tablepress'})
 rows = table.find_all('tr')
 
-with open('senate-press.csv', 'w') as outfile:
+with open('congress-press.csv', 'w') as outfile:
 
     writer = csv.DictWriter(outfile, fieldnames=['org', 'first', 'last'])
     writer.writeheader()
